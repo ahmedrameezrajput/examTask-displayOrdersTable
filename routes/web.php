@@ -21,7 +21,13 @@ Route::get('/', function () {
     return Inertia::render('ExamTask/App');
 });
 
-Route::get('/orders',[OrderController::class, 'index']);
+Route::get('/react', function () {
+    return Inertia::render('ExamTask/OrderList');
+});
+
+Route::get('/react-orders',[OrderController::class, 'react']);
+
+Route::get('/blade', [OrderController::class, 'blade']);
 
 //a rout to render App.jsx in /resources/js/Pages/ExamTask/App.jsx?
 

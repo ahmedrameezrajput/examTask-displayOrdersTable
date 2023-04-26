@@ -1,5 +1,5 @@
 import React from "react";
-import OrderList from "./OrderList";
+// import OrderList from "./OrderList";
 
 function App() {
     return (
@@ -7,9 +7,27 @@ function App() {
             <h1 class="text-5xl font-['Helvetica Neue']">
                 hello and please work...
             </h1>
-            <div class="py-16">
+            <br />
+            <br />
+            <p class="text-lg">
+                1.{" "}
+                <a
+                    href="/react"
+                    class="hover:underline hover:underline-offset-4"
+                >
+                    react order list
+                </a> <br />
+                2.{" "}
+                <a
+                    href="/blade"
+                    class="hover:underline hover:underline-offset-4"
+                >
+                    blade order list
+                </a>
+            </p>
+            {/* <div class="py-16">
                 <OrderList />
-            </div>
+            </div> */}
         </div>
     );
 }

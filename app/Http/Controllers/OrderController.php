@@ -2,16 +2,24 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\DB;
+
 use Illuminate\Http\Request;
 use App\Models\Order;
 
 
 class OrderController extends Controller
 {
-    public function index()
+    public function react()
     {
         $orders = Order::select('order_date', 'total_amount', 'ordered_by', 'order_status')->get();
 
         return response()->json($orders);
+    }
+
+    public function blade(){
+        $orders = DB::table('orders')->get();
+
+        return view('orders', ['orders' => $orders]);
     }
 }

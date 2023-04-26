@@ -4,14 +4,14 @@ function OrderList() {
     const [orders, setOrders] = useState([]);
 
     useEffect(() => {
-        fetch("/orders")
+        fetch("/react-orders")
             .then((response) => response.json())
             .then((data) => setOrders(data))
             .catch((error) => console.error(error));
     }, []);
 
     return (
-        <div>
+        <div class="px-20 py-32 bg-[#E6DDC4] h-screen">
             {/* <div>
                 <h1>Orders</h1>
                 <table>
@@ -35,6 +35,14 @@ function OrderList() {
                     </tbody>
                 </table>
             </div> */}
+            
+            <div class="flex justify-center items-center">
+                <a href="/">
+                    <button class="bg-[#181D31] text-[#E6DDC4] px-8 py-2 hover:bg-[#678983] hover:text-[#181D31]">
+                        home
+                    </button>
+                </a>
+            </div>
 
             <div class="flex flex-col">
                 <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
@@ -70,7 +78,7 @@ function OrderList() {
                                                 {order.ordered_by}
                                             </td>
                                             <td class="whitespace-nowrap px-6 py-2">
-                                               $ {order.total_amount}
+                                                $ {order.total_amount}
                                             </td>
                                             <td class="whitespace-nowrap px-6 py-2">
                                                 {order.order_status}
