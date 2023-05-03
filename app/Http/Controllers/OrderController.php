@@ -17,8 +17,9 @@ class OrderController extends Controller
         return response()->json($orders);
     }
 
-    public function blade(){
-        $orders = DB::table('orders')->get();
+    public function blade()
+    {
+        $orders = Order::select('order_date', 'total_amount', 'ordered_by', 'order_status')->get();
 
         return view('orders', ['orders' => $orders]);
     }

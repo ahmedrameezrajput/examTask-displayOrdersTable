@@ -31,7 +31,7 @@
         </tbody>
     </table> -->
 
-    <div class="px-20 py-32 bg-[#E6DDC4] h-screen">
+    <div class="px-60 py-32 bg-[#E6DDC4] h-screen">
         <!-- <div>
             <h1>Orders</h1>
             <table>
@@ -56,7 +56,9 @@
             </table>
         </div> -->
 
-        <div class="flex justify-center items-center">
+        <h2 class="flex justify-center items-center py-8 text-3xl font-bold">blade</h2>
+
+        <div class="flex justify-center items-center py-6">
             <a href="/">
                 <button class="bg-[#181D31] text-[#E6DDC4] px-8 py-2 hover:bg-[#678983] hover:text-[#181D31]">
                     home
